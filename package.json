@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Natours tours app",
+  "main": "index.js",
+  "scripts": {
+    "start:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/na4oman/natours-with-sass.git"
+  },
+  "author": "Atanas Irikev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/na4oman/natours-with-sass/issues"
+  },
+  "homepage": "https://github.com/na4oman/natours-with-sass#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
