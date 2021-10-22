@@ -3,6 +3,10 @@
   background-color: $color-grey-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
+
+  @include for-size(tab-port) {
+    margin-bottom: 15rem;
+  }
 }
 
 // FETURES SECTION
@@ -40,7 +44,9 @@
 
 // CTA SECTION
 .section-cta {
-  height: 80rem;
+  // height: 80rem;
+  padding: 40rem 0;
+
   background-image: linear-gradient(
     to right bottom,
     $color-primary-light,
@@ -50,6 +56,7 @@
 }
 
 .cta-box {
+  @include absCenter;
   width: 80%;
   background-image: linear-gradient(
       105deg,
@@ -59,10 +66,32 @@
     ),
     url(../../img/nat-10.jpg);
   background-size: cover;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+
+  @include for-size(tab-land) {
+    width: 100%;
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../../img/nat-10.jpg);
+  }
+
+  @include for-size(phone) {
+    width: 85%;
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%,
+        transparent 100%
+      ),
+      url(../../img/nat-10.jpg);
+  }
 }

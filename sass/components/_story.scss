@@ -10,6 +10,17 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include for-size(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 5rem;
+  }
+
+  @include for-size(phone) {
+    width: 90%;
+    transform: skewX(0);
+  }
+
   &__shape {
     float: left;
     width: 15rem;
@@ -21,6 +32,10 @@
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
+
+    @include for-size(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__image {
@@ -32,6 +47,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include for-size(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {

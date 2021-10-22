@@ -13,8 +13,17 @@
     background-color: $color-white;
     box-shadow: 0 1rem 5rem rgba($color-black, 0.2);
     z-index: 2000;
-
     text-align: center;
+
+    @include for-size(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include for-size(phone) {
+      top: 2.5rem;
+      right: 2.5rem;
+    }
   }
 
   &__background {
@@ -30,6 +39,16 @@
     );
     z-index: 1000;
     transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
+
+    @include for-size(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include for-size(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__nav {
@@ -42,14 +61,13 @@
 
     opacity: 0;
     width: 0;
+    visibility: hidden;
   }
 
   &__list {
     list-style: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include absCenter;
+    width: 100%;
     text-align: center;
   }
 
@@ -96,6 +114,7 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+    visibility: visible;
   }
 
   // ICON STYLE

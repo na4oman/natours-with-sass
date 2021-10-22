@@ -4,6 +4,10 @@
   font-size: 1.4rem;
   padding: 10rem;
 
+  @include for-size(tab-land) {
+    padding: 10rem 1rem;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 10rem;
@@ -16,6 +20,16 @@
     display: inline-block;
     border-top: 1px solid $color-grey-dark;
     padding-top: 2rem;
+
+    @include for-size(tab-port) {
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    @include for-size(phone) {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   &__list {
@@ -55,5 +69,14 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+
+    @include for-size(tab-port) {
+      float: none;
+      margin: 0 auto;
+    }
+
+    @include for-size(phone) {
+      width: 100%;
+    }
   }
 }

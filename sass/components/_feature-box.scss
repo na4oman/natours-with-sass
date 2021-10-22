@@ -6,6 +6,16 @@
   border-radius: 3px;
   transition: all 0.2s;
 
+  @include for-size(tab-port) {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  @include for-size(phone) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   &__icon {
     display: inline-block;
     font-size: 6rem;

@@ -10,6 +10,16 @@
     margin-bottom: $gutter-vertical;
   }
 
+  @include for-size(tab-port) {
+    max-width: 80%;
+    padding: 0 3rem;
+  }
+
+  @include for-size(phone) {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+
   @include clearfix;
 
   [class^='col-'] {
@@ -17,6 +27,15 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include for-size(tab-port) {
+        margin-right: 0;
+      }
+    }
+
+    @include for-size(tab-port) {
+      width: 100% !important;
+      margin-bottom: $gutter-horizontal;
     }
   }
 
