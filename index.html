@@ -104,19 +104,27 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
-                src="img/nat-1-large.jpg"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 35vw, 18.75em"
                 alt="Photo 1"
                 class="composition__photo composition__photo--p1"
+                src="img/nat-1-large.jpg"
               />
+
               <img
-                src="img/nat-2-large.jpg"
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 35vw, 18.75em"
                 alt="Photo 2"
                 class="composition__photo composition__photo--p2"
+                src="img/nat-2-large.jpg"
               />
+
               <img
-                src="img/nat-3-large.jpg"
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 35vw, 18.75em"
                 alt="Photo 3"
                 class="composition__photo composition__photo--p3"
+                src="img/nat-3-large.jpg"
               />
             </div>
           </div>
@@ -305,10 +313,13 @@
           <div class="story">
             <figure class="story__shape">
               <img
-                src="/img/nat-8.jpg"
+                srcset="img/nat-8.jpg 2000w, img/nat-8-small.jpg 1000w"
+                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 45vw, 20em"
                 alt="A women sitting in a boat"
                 class="story__image"
+                src="img/nat-8.jpg"
               />
+
               <figcaption class="story__caption">Mary Smith</figcaption>
             </figure>
             <div class="story__text">
@@ -331,9 +342,11 @@
           <div class="story">
             <figure class="story__shape">
               <img
-                src="/img/nat-9.jpg"
-                alt="A women sitting in a boat"
+                srcset="img/nat-9.jpg 2000w, img/nat-9-small.jpg 1000w"
+                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 45vw, 20em"
+                alt="A man watchin the horizon"
                 class="story__image"
+                src="img/nat-9.jpg"
               />
               <figcaption class="story__caption">Jack Wilson</figcaption>
             </figure>
@@ -428,11 +441,20 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__logo-box">
-        <img
-          src="img/logo-green-1x.png"
-          alt="Company logo"
-          class="footer__logo"
-        />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Company logo"
+            src="img/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -472,11 +494,24 @@
       </div>
     </footer>
 
+    <!-- POP-UP -->
     <div class="popup" id="popup">
       <div class="popup__box">
         <div class="popup__left">
-          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
-          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
+          <img
+            srcset="img/nat-8-small.jpg 1000w, img/nat-8.jpg 2000w"
+            sizes="(max-width: 56.25em) 25vw, (max-width: 37.5em) 25vw, 22.5em"
+            alt="Tour photo"
+            class="popup__img"
+            src="img/nat-8.jpg"
+          />
+          <img
+            srcset="img/nat-9-small.jpg 1000w, img/nat-9.jpg 2000w"
+            sizes="(max-width: 56.25em) 25vw, (max-width: 37.5em) 25vw, 22.5em"
+            alt="Tour photo"
+            class="popup__img"
+            src="img/nat-9.jpg"
+          />
         </div>
         <div class="popup__right">
           <a href="#section-tours" class="popup__close">&times;</a>

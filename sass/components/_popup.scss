@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba($color-black, 0.8);
+  // background-color: rgba($color-black, 0.8);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
@@ -22,11 +22,25 @@
     opacity: 0;
     transition: all 0.5s 0.2s;
     transform: translate(-50%, -50%) scale(0);
+
+    @include for-size(tab-port) {
+      height: 80%;
+      width: 90%;
+    }
+
+    @include for-size(phone) {
+      height: 90%;
+      width: 90%;
+    }
   }
 
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include for-size(phone) {
+      width: 0;
+    }
   }
 
   &__right {
@@ -34,6 +48,10 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include for-size(phone) {
+      width: 100%;
+    }
   }
 
   &__img {
