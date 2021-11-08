@@ -3,7 +3,6 @@
   width: 75%;
   box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
   border-radius: 3px;
-  // height: 25rem;
   margin: 0 auto;
   padding: 6rem;
   padding-left: 9rem;
@@ -25,13 +24,18 @@
     float: left;
     width: 15rem;
     height: 15rem;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
+    border-radius: 50%;
+
+    @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: 0;
+    }
 
     @include for-size(phone) {
       transform: translateX(-3rem) skewX(0);
