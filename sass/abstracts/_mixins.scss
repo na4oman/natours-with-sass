@@ -34,19 +34,19 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 @mixin for-size($size) {
   @if $size == tab-land {
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       @content; // 1200px
     }
   } @else if $size == tab-port {
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       @content; // 900px
     }
   } @else if $size == phone {
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       @content;
     } // 600px
   } @else if $size == desctop-big {
-    @media (min-width: 112.5em) {
+    @media only screen and (min-width: 112.5em) {
       @content; // 1800px
     }
   }
